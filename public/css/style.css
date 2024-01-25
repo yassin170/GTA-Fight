@@ -13,14 +13,14 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     background-image: url();
     backdrop-filter: blur(2px);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .menu {
@@ -29,11 +29,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../src/img/lieux/gta-vi-trailer-background-5120x2160-v0-xon9afqutq3c1.webp);
-    backdrop-filter: blur(2px);
+    background-image: url(../src/img/bgmenu/gta-vi-trailer-background-5120x2160-v0-xon9afqutq3c1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: none;
 }
 
 .menuTop {
@@ -42,6 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px;
 }
 
 #logo1 {
@@ -73,13 +74,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 65px;
 }
 
 .menuBottomLeftP {
     font-family: Madame;
-    color: rgb(95, 21, 21);
+    color: rgb(0, 0, 0);
     font-size: 3em;
-    margin: 8px;
+    margin: 7px;
     text-shadow: 1px 0 #ffffff, -1px 0 #ffffff, 0 1px #ffffff, 0 -1px #ffffff, 0px 0px #ffffff, -1px -1px #ffffff, 0px 0px #ffffff, 0px 0px #ffffff;
 }
 
@@ -91,6 +93,15 @@ body {
 .menuBottomRight {
     width: 25%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+#logo-Rockstar {
+    height: 100px;
+    width: 100px;
 }
 
 
@@ -234,12 +245,16 @@ body {
 }
 
 
-.play{
-    background-image: url(../src/img/lieux/lieux2.jpg);
-    backdrop-filter: blur(2px);
+.game {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../src/img/lieux/groovestreet.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
 }
 
