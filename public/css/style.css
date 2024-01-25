@@ -3,6 +3,11 @@
     src: url(../font/ThirstyCaps.otf);
 }
 
+@font-face {
+    font-family: Madame;
+    src: url(../font/Madame.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,12 +29,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../src/img/lieux/gta-vi-trailer-background-5120x2160-v0-xon9afqutq3c1.webp);
+    backdrop-filter: blur(2px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menuTop {
     height: 20%;
     width: 100%;
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +61,38 @@ body {
 .menuBottom {
     height: 80%;
     width: 100%;
-    background-color: chartreuse;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.menuBottomLeft {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBottomLeftP {
+    font-family: Madame;
+    color: rgb(95, 21, 21);
+    font-size: 3em;
+    margin: 8px;
+    text-shadow: 1px 0 #ffffff, -1px 0 #ffffff, 0 1px #ffffff, 0 -1px #ffffff, 0px 0px #ffffff, -1px -1px #ffffff, 0px 0px #ffffff, 0px 0px #ffffff;
+}
+
+.menuBottomCenter {
+    width: 50%;
+    height: 100%;
+}
+
+.menuBottomRight {
+    width: 25%;
+    height: 100%;
+}
+
 
 .choice {
     height: 530px;
@@ -196,9 +232,6 @@ body {
     font-size: 5em;
     text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
-
-
-
 
 
 .play{
