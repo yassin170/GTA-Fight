@@ -220,7 +220,7 @@ body {
 }
 
 /*-------------------------------------------------------------------------------------------------------*/
-/*                                                                                                 */
+/*                                    name of perso                                                      */
 /*-------------------------------------------------------------------------------------------------------*/
 
 .namePerso1 {
@@ -245,6 +245,15 @@ body {
 }
 
 
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*                                           Game                                                        */
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+
+
 .game {
     width: 100vw;
     height: 100vh;
@@ -253,8 +262,93 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* display: none; */
 }
+
+#gameTop {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itsyourturn {
+    font-family: thirstyCaps;
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+#gameCenter {
+    height: 24%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#roueDesArmes {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#gameBottom {
+    height: 68%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+}
+
+.zoneWar1 {
+    width: 50%;
+    height: 100%;
+    background-color: cornflowerblue; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    height: 400px;
+    width: 300px;
+    background-color: black;
+}
+
+#life1 {
+    height: 15%;
+    width: 100%;
+    background-color: darkorange;
+}
+
+.zoneWar2 {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(147, 6, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordi {
+    height: 400px;
+    width: 300px;
+    background-color: black;
+}
+
+#life2 {
+    height: 15%;
+    width: 100%;
+    background-color: darkorange;
+}
+
 
