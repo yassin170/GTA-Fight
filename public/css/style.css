@@ -305,14 +305,12 @@ body {
 #gameBottom {
     height: 68%;
     width: 100%;
-    background-color: green;
     display: flex;
 }
 
 .zoneWar1 {
     width: 50%;
     height: 100%;
-    background-color: cornflowerblue; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,19 +319,33 @@ body {
 .user {
     height: 400px;
     width: 300px;
-    background-color: black;
 }
 
 #life1 {
     height: 15%;
     width: 100%;
     background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxFighter1 {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fighter1 {
+    height: 290px;
+    width: 340px;
 }
 
 .zoneWar2 {
     width: 50%;
     height: 100%;
-    background-color: rgb(147, 6, 69);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,13 +354,25 @@ body {
 .ordi {
     height: 400px;
     width: 300px;
-    background-color: black;
 }
 
 #life2 {
     height: 15%;
     width: 100%;
     background-color: darkorange;
+}
+
+#boxFighter2 {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fighter2 {
+    height: 290px;
+    width: 340px;
 }
 
 
