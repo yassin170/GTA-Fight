@@ -33,7 +33,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+    /* display: none; */
 }
 
 .menuTop {
@@ -265,7 +265,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    display: none;
 }
 
 #gameTop {
@@ -300,8 +300,6 @@ body {
     align-items: center;
 }
 
-
-
 #gameBottom {
     height: 68%;
     width: 100%;
@@ -324,10 +322,10 @@ body {
 #life1 {
     height: 15%;
     width: 100%;
-    background-color: darkorange;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #boxFighter1 {
@@ -359,7 +357,10 @@ body {
 #life2 {
     height: 15%;
     width: 100%;
-    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 #boxFighter2 {
