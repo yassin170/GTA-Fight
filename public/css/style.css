@@ -366,12 +366,6 @@ body {
 
 
 
-
-
-
-
-
-
 #finisherCJ {
     height: 100vh;
     width: 100vw;
@@ -381,4 +375,25 @@ body {
     background-repeat: no-repeat;
     display: none;
 }
+
+#finisherClaude {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../src/img/finisher/finisherClaude.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+#finisherNB {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../src/img/finisher/finisherNB.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
 

@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let boxNB = document.querySelector('.boxNB');
     let boxCLAUDE = document.querySelector('.boxCLAUDE');
 
+    let soundpunch = new Audio('../public/src/sound/punhsound.mp3');
+    let soundchain = new Audio('../public/src/sound/chainsawsound.mp3');
+    let soundpompe = new Audio('../public/src/sound/pompesound.mp3');
+    let sounduzi = new Audio('../public/src/sound/uzisound.mp3');
+
+    let soundmenu = new Audio('../public/src/sound/menusound.mp3');
+
     let isUserTurn = true;
 
     let damageOrdi = 0;
@@ -23,21 +30,41 @@ document.addEventListener('DOMContentLoaded', () => {
     let ordiStars4 = document.querySelector('.ordiStars4');
     let ordiStars5 = document.querySelector('.ordiStars5');
 
+    let selectedFinisher = null;
+
     let finisherCJ = document.getElementById('finisherCJ');
+    let finisherClaude = document.getElementById('finisherClaude');
+    let finisherNB = document.getElementById('finisherNB')
+
+
+    function sound() {
+        soundmenu.loop = true;
+        soundmenu.volume = "0.2";
+        soundmenu.play();
+    };
+
+    let backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.volume = "0.2";
+
 
     boxCJ.addEventListener('click', () => {
-        choosePerso('./public/src/img/personnages/CarlJohnson.gif');
+        sound();
+        choosePerso('./public/src/img/personnages/CarlJohnson.gif', finisherCJ);
     });
 
     boxNB.addEventListener('click', () => {
-        choosePerso('./public/src/img/personnages/NicoBellic.gif');
+        sound();
+        choosePerso('./public/src/img/personnages/NicoBellic.gif', finisherNB);
     });
 
     boxCLAUDE.addEventListener('click', () => {
-        choosePerso('./public/src/img/personnages/Claude.gif');
+        sound();
+        choosePerso('./public/src/img/personnages/Claude.gif', finisherClaude);
     });
 
-    function choosePerso(persoImage) {
+
+    function choosePerso(persoImage, finisher) {
+        selectedFinisher = finisher;
         let menu = document.querySelector('.menu');
         menu.style.display = 'none';
 
@@ -62,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fighter2.src = ordiFighter;
         fighter2.style.transform = 'scaleX(-1)';
 
+
+
+        function retournerAuMenu() {
+            document.location.reload()
+        }
 
         function performTurn() {
             isUserTurn = false;
@@ -98,7 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (damageOrdi >= 50) {
                         menu.style.display = 'none';
                         game.style.display = 'none';
-                        finisherCJ.style.display = 'flex';
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'flex';
+                        }, 1000);
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'none';
+                            retournerAuMenu()
+                        }, 6000);
                     }  
                     break;
                 case 10:
@@ -124,7 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (damageOrdi >= 50) {
                         menu.style.display = 'none';
                         game.style.display = 'none';
-                        finisherCJ.style.display = 'flex';
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'flex';
+                        }, 1000);
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'none';
+                            retournerAuMenu()
+                        }, 6000);
                     }  
                     break;
                 case 15:
@@ -150,7 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (damageOrdi >= 50) {
                         menu.style.display = 'none';
                         game.style.display = 'none';
-                        finisherCJ.style.display = 'flex';
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'flex';
+                        }, 1000);
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'none';
+                            retournerAuMenu()
+                        }, 6000);
                     }  
                     break;
                 case 20:
@@ -176,7 +226,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (damageOrdi >= 50) {
                         menu.style.display = 'none';
                         game.style.display = 'none';
-                        finisherCJ.style.display = 'flex';
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'flex';
+                        }, 1000);
+                        setTimeout(() => {
+                            selectedFinisher.style.display = 'none';
+                            retournerAuMenu()
+                        }, 6000);
                     }  
                     break;
                 default:
@@ -211,7 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 } if (damageUser >= 50) {
                     menu.style.display = 'none';
                     game.style.display = 'none';
-                    finisherCJ.style.display = 'flex';
+                    setTimeout(() => {
+                        selectedFinisher.style.display = 'flex';
+                    }, 1000);
                 }  
             }
             if (resultat == 10) {
@@ -233,7 +291,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 } if (damageUser >= 50) {
                     menu.style.display = 'none';
                     game.style.display = 'none';
-                    finisherCJ.style.display = 'flex';
+                    setTimeout(() => {
+                        selectedFinisher.style.display = 'flex';
+                    }, 1000);
                 }  
             }
             if (resultat == 15) {
@@ -255,12 +315,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 } if (damageUser >= 50) {
                     menu.style.display = 'none';
                     game.style.display = 'none';
-                    finisherCJ.style.display = 'flex';
+                    setTimeout(() => {
+                        selectedFinisher.style.display = 'flex';
+                    }, 1000);
                 }  
             }
         }
 
         attack1.addEventListener('click', () => {
+            soundpunch.play();
             if (isUserTurn) {
                 updateStars(5);
                 performTurn();
@@ -269,6 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         attack2.addEventListener('click', () => {
+            soundchain.play();
             if (isUserTurn) {
                 updateStars(10);
                 performTurn();
@@ -277,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         attack3.addEventListener('click', () => {
+            sounduzi.play();
             if (isUserTurn) {
                 updateStars(15);
                 performTurn();
@@ -284,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         attack4.addEventListener('click', () => {
+            soundpompe.play();
             if (isUserTurn) {
                 updateStars(20);
                 performTurn();
