@@ -13,14 +13,6 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url();
-    backdrop-filter: blur(2px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .menu {
@@ -290,15 +282,11 @@ body {
     justify-content: center;
 }
 
-#roueDesArmes {
-    height: 175px;
-    width: 175px;
-    border-radius: 50%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* .square:hover {
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    box-shadow: inset 0 0 50px 0px white;
+} */
 
 #gameBottom {
     height: 68%;
@@ -376,4 +364,21 @@ body {
     width: 340px;
 }
 
+
+
+
+
+
+
+
+
+#finisherCJ {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../src/img/finisher/finisherCJ.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
 
